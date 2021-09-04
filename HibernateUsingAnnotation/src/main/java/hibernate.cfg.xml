@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+  
+<hibernate-configuration>  
+  
+    <session-factory>  <!-- session factory opens the session -->
+  	<!-- connection details -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/techment</property>  
+        <property name="connection.username">root</property>  
+        <property name="connection.password">root</property>  
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>  
+        
+        <!-- Hibernate property -->
+          <property name="hbm2ddl.auto">update</property>  <!-- check table is there or not otherwise it will create automatically -->
+          
+          <!--<property name="hbm2ddl.auto">create-drop</property> =============> It will drop the if table exist with same name and then create new and then drop-->
+          <!--<property name="hbm2ddl.auto">create</property> =========> It will create a new Table each Time-->
+          <property name="format_sql">true</property> <!-- output in format -->
+         
+          <property name="show_sql">true</property> 
+          <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property> <!-- it is using mysql -->
+        
+        <!-- Mapping Details -->
+  <!-- <mapping resource="employee.hbm.xml"/>   -->  
+  <mapping class="com.techment.Student"/>
+    </session-factory>  
+  
+</hibernate-configuration>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+               
+
+<bean id="r" class="com.techment.modal.Restaurant">
+ <property name="restaurantName" value="Cafe Cottage"></property>
+ <property name="hotDrink" ref="c"></property>
+  <property name="softDrink" ref="p"></property>
+  <property name="employeeName">
+  <list>
+  <value>Chikoo</value>
+    <value>Raina</value>
+    <value>Juhi</value>
+  
+  </list>
+  </property>
+ 
+ </bean>
+ 
+ <bean id="t" class="com.techment.modal.Tea">
+ <property name="price" value="10"></property>
+ </bean>
+ 
+ <bean id="c" class="com.techment.modal.Coffee"></bean>
+  <bean id="m" class="com.techment.modal.Milk"></bean>
+  <bean id="p" class="com.techment.modal.Pepsi"></bean>
+  <bean id="maza" class="com.techment.modal.Maaza"></bean>
+ 
+ 
+ </beans>
